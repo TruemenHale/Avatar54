@@ -4,10 +4,13 @@
 function toMain(){
     var Lead = $('#LeadPage');
     Lead[0].addEventListener('touchstart',function(event){
+        event.stopPropagation();
         var oY = event.touches[0].screenY;
         Lead[0].addEventListener('touchmove',function(event){
             var nY = event.touches[0].screenY;
+            event.stopPropagation();
             Lead[0].addEventListener('touchend',function(){
+                event.stopPropagation();
                 if(oY - nY > 30){
                     $.mobile.changePage('#MainPage',{
                         transition: 'slideup'
