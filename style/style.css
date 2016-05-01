@@ -48,10 +48,10 @@
   background: #ffffff;
 }
 #MainPage .EveryBox .AvatarBox .TuanHui {
-  width: 29%;
+  width: 34%;
   position: absolute;
   top: 0;
-  left: 71%;
+  left: 66%;
   z-index: 100;
 }
 #MainPage .EveryBox .AvatarBox .avatar {
