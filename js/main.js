@@ -1,6 +1,22 @@
 /**
  * Created by truemenhale on 16/5/1.
  */
+function toMain(){
+    var Lead = $('#LeadPage');
+    Lead[0].addEventListener('touchstart',function(event){
+        var oY = event.touches[0].screenY;
+        Lead[0].addEventListener('touchmove',function(event){
+            var nY = event.touches[0].screenY;
+            Lead[0].addEventListener('touchend',function(){
+                if(oY - nY > 30){
+                    $.mobile.changePage('#MainPage',{
+                        transition: 'slideup'
+                    });
+                }
+            })
+        });
+    });
+}
 $(function(){
     $.mobile.loading('show');
     var aImg = ['MainPage.jpg','LeadPage.jpg','QRcode.jpg','tuanhui.png'];
@@ -17,9 +33,5 @@ $(function(){
             }
         }
     }
-   $('#LeadPage').on('touchmove',function(){
-       $.mobile.changePage('#MainPage',{
-           transition: 'slideup'
-       });
-   });
+    toMain();
 });
