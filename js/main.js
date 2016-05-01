@@ -17,7 +17,7 @@ $(function(){
             }
         }
     }
-   $('#LeadPage').on('scroll',function(){
+   $('#LeadPage').on('touchmove',function(){
        $.mobile.changePage('#MainPage',{
            transition: 'slideup'
        });
