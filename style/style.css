@@ -48,16 +48,16 @@
   background: #ffffff;
 }
 #MainPage .EveryBox .AvatarBox .TuanHui {
-  width: 34%;
+  width: 39%;
   position: absolute;
   top: 0;
-  left: 66%;
+  left: 61%;
   z-index: 100;
 }
 #MainPage .EveryBox .AvatarBox .avatar {
-  width: 95%;
+  width: 92%;
   position: absolute;
-  top: 5%;
+  top: 8%;
 }
 #MainPage .warming {
   text-align: center;
