@@ -44,13 +44,19 @@ $(function(){
                 avatar.onload = function(){
                     console.log(avatar.width+','+avatar.height);
                     gd.save();
-                    gd.drawImage(avatar,1,w*0.11,w*0.87,w*0.87);
+                    gd.drawImage(avatar,1,w*0.13,w*0.87,w*0.87);
                     gd.drawImage(oT,w*0.7,0,w*0.3,w*0.3);
                     gd.restore();
                     $.mobile.loading('hide');
                     $.mobile.changePage('#LeadPage');
+                    var _url = canvas[0].toDataURL();
+                    console.log(_url);
+                    var img = new Image();
+                    img.src = _url;
+                    img.onload = function(){
+                        $('.avatar').attr('src',_url);
+                    }
                 };
-
             }
         }
     }
