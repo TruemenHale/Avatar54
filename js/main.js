@@ -7,9 +7,9 @@ function toMain(){
         event.stopPropagation();
         var oY = event.touches[0].screenY;
         Lead[0].addEventListener('touchmove',function(event){
-            var nY = event.touches[0].screenY;
             event.stopPropagation();
             Lead[0].addEventListener('touchend',function(){
+                var nY = event.touches[0].screenY;
                 event.stopPropagation();
                 if(oY - nY > 30){
                     $.mobile.changePage('#MainPage',{
